@@ -1,0 +1,40 @@
+<html>
+ <head>
+   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       
+         <title>CATEGORIAS</title>
+     <body>
+         <form name="f_cadCat" id="f_cadCat" method="GET" action="index.php">
+             <label>Numero da loja: </label><br/>
+             <input type="number" name="loja" id="loja" size="15"  maxlength="30"/><br/><br/>
+             <label>API: </label><br/>
+             <input type="text" name="api" id="api" size="60"  maxlength="60"/><br/><br/>
+             <input type="text" name="cadastraCat" size="15"  maxlength="30"/><br/><br/>
+             <input type="submit" id="submit" value="Enviar"/>
+             <input type="reset" value="Limpar"/>
+            <!--
+             <div class="result"></div>
+                <script type="text/javascript">
+                   var r;
+                   $("#submit").click((e)=>{
+                    e.preventDefault();
+                       let dados = {
+                           jqLoja:$("#loja").val(),
+                           jqapi:$("#api").val()
+                       }
+                       $.post("controller.php", dados, function(result, status){
+                         o = JSON.parse(result);
+                         html_result = "Dados Inseridos "+o.jqLoja;
+                         $(".result").html(html_result);
+                       console.log(status)
+                       console.log(result)
+                       })  
+                   });
+                </script>
+                -->
+              
+         </form>
+     </body>
+ </head>
+</html>
