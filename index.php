@@ -10,16 +10,28 @@ $criaCategoria = new Categoria();
 
 $vloja = $_GET["loja"];
 $vapi = $_GET["api"];
-$vcat = $_GET["cadastraCat"]; 
+$vcat1 = $_GET["cadastraCat1"];
+$vcat2 = $_GET["cadastraCat2"]; 
+$vcat3 = $_GET["cadastraCat3"]; 
+$vcat4 = $_GET["cadastraCat4"]; 
+$vcat5 = $_GET["cadastraCat5"]; 
+
 
 $criaCategoria->setNumLoja($vloja);
 $criaCategoria->setApi($vapi);
-/*
-$criaCategoria->setNomeCategoria($vcat);
-$criaCategoria->setListaCategoria($vcat);
+$criaCategoria->setNomeCategoria($vcat1);
+$criaCategoria->setListaCategoria($vcat1);
+$criaCategoria->setNomeCategoria($vcat2);
+$criaCategoria->setListaCategoria($vcat2);
+$criaCategoria->setNomeCategoria($vcat3);
+$criaCategoria->setListaCategoria($vcat3);
+$criaCategoria->setNomeCategoria($vcat4);
+$criaCategoria->setListaCategoria($vcat4);
+$criaCategoria->setNomeCategoria($vcat5);
+$criaCategoria->setListaCategoria($vcat5);
 $criaCategoria->getListaCategoria();
+header ('Location: http://implantador.x10.mx/index.html');
 
-*/
 //$criaCategoria->getFormCategoria();
 
 
