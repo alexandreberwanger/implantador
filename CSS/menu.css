@@ -1,0 +1,124 @@
+/* estilizando a div orverlay */
+.overlay {
+    height: 100vh;
+    /* deixando o overlay 100% na vertical */
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    /*iniciando opacidade em 0 */
+    transition: opacity 1s;
+}
+
+/* estilizando o botão abrir menu */
+.menu-open {
+    background: #1D0C38;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 25px;
+}
+
+/* estilizando o botão fechar menu */
+.menu a.menu-close {
+    /* padding: 8px 0 4px 23px; */
+    color: #fff;
+    display: block;
+    /* margin: -30px 0 -10px -20px; */
+    font-size: 35px;
+    text-decoration: none;
+    right: 25px;
+    top: 5px;
+    position: absolute;
+}
+
+/* estilizando o menu em si */
+.menu {
+    overflow: hidden;
+    background: #1D0C38;
+    padding: 40px 0 0 40px;
+    position: fixed;
+    top: 0;
+    left: -290px;
+    /*iniciando o menu com menos 290px para fora do browser*/
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s;
+    width: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1D0C38;
+}
+
+/* estilizando o menu + ul */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    width: 500px;
+    height: 98%;
+}
+
+/* estilizando o menu + ul li + a */
+.menu ul li a {
+    display: block;
+    border-bottom: 1px solid #131313;
+    padding: 6px 4px 6px 4px;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+a.menu_ul {
+    text-transform:
+    uppercase;
+    border-bottom: 3px groove #ffffff !important;
+    margin-bottom: 20px;
+}
+a.implantador {
+    color: #1D0C38;
+    margin: auto;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
+.lista-menu{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+}
+.wrap-login100-controller{
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    border-radius: 0;
+}
