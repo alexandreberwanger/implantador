@@ -2,25 +2,23 @@
 
 require 'config.php';
 
-$loja = [];
-$id = filter_input(INPUT_GET, 'id');
+$usuario = [];
+$id = filter_input(INPUT_POST, 'id');
 
 if($id){
-    $sql = $pdo->prepare("DELETE FROM acesso WHERE id = :id");
+    $sql = $pdo->prepare("SELECT * FROM acesso WHERE id = :id");
     $sql->bindValue(':id', $id);
     $sql->execute();
 
 
-    //if($sql->rowCount() > 0) {
+    if($sql->rowCount() > 0) {
         $loja = $sql->fetch(PDO::FETCH_ASSOC);
         //die('tem');
-   // } else {
+    } else {
        // die('n tem');
         header("Location: index.php");
         exit;
-   // } 
-  //  } else {
-   //     header("Location: index.php");
-   }
-
-?>
+    } 
+    } else {
+        header("Location: index.php");
+    }

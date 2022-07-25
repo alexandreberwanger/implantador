@@ -16,17 +16,17 @@ if($id){
         //die('tem');
     } else {
        // die('n tem');
-        header("Location: http://implantador.x10.mx/index.php");
+        header("Location: index.php");
         exit;
     } 
     } else {
-        header("Location: http://implantador.x10.mx/index.php");
+        header("Location: index.php");
     }
 
 ?>
 
 <h1>Editar Usuário</h1>
-<form method="POST" action="http://implantador.x10.mx/editar_action.php">
+<form method="POST" action="editar_action.php">
     <input type="hidden" name="id" value="<?=$loja['id'];?>"/>
     <label>
         Loja: <input type="number" name="numero_loja" value="<?=$loja['numero_loja'];?>"/>

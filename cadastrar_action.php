@@ -23,7 +23,7 @@ if($numeroLoja && $chaveApi){
         $sql->bindValue(':chave_api', $chaveApi);
         
         $sql->execute();
-        header("Location: http://implantador.x10.mx/controller.php");
+        header("Location: controller.php");
         
         exit;
        /* 
@@ -34,6 +34,6 @@ if($numeroLoja && $chaveApi){
 
 } else {
     //die('caiu');
-    header("Location: http://implantador.x10.mx/index.php");
+    header("Location: index.php");
     exit;
 }

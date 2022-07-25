@@ -14,9 +14,9 @@ if($id && $numero_loja && $chave_api){
 
     $sql->execute();
 
-    header("Location: http://implantador.x10.mx/controller.php");
+    header("Location: controller.php");
     exit;
 } else {
     //die('PAROUU');
-    header("Location: http://implantador.x10.mx/controller.php");
+    header("Location: controller.php");
 }

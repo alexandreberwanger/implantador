@@ -1,72 +1,45 @@
 <?php
 require_once 'CategoriaClass.php';
 require 'config.php';
+$categoria = new Categoria();
 
-
+//die('veio');
         $usuario = [];
         $id = filter_input(INPUT_GET, 'id');
-        $categoria = new Categoria();
-        
-        if($id){
-            $sql = $pdo->prepare("SELECT * FROM acesso WHERE id = :id");
-            $sql->bindValue(':id', $id);
-            $sql->execute();
-        
-        
-            if($sql->rowCount() > 0) {
-                $loja = $sql->fetch(PDO::FETCH_ASSOC);
-                $categoria->setNumLoja($loja['numero_loja']);
-                $categoria->setApi($loja['chave_api']);
-                ?>
+        $loja = $_GET["loja"];
+        $api = $_GET["api"];
+        $vcat1 = $_GET["cadastraCat1"];
+        $vcat2 = $_GET["cadastraCat2"]; 
+        $vcat3 = $_GET["cadastraCat3"]; 
+        $vcat4 = $_GET["cadastraCat4"]; 
+        $vcat5 = $_GET["cadastraCat5"];
+        $vcat6 = $_GET["cadastraCat6"]; 
+        $vcat7 = $_GET["cadastraCat7"]; 
+        $vcat8 = $_GET["cadastraCat8"]; 
+        $vcat9 = $_GET["cadastraCat9"]; 
+        $vcat10 = $_GET["cadastraCat10"];
 
-                <form name="f_cadCat" id="f_cadCat" method="GET" action="categoriaModel.php">
-        
-                <label>V. beta</label><br/>
-                <br/>
-                <br/>
-                <br/>
-                <label>Numero da loja: </label>
-                <input type="number" name="loja" id="loja" value="<?=$loja['numero_loja']?>" size="15"  maxlength="30"/>
-                <label>Chave da API: </label>
-                <input type="text" name="api" id="api" value="<?=$loja['chave_api'];?>"  size="60"  maxlength="60"/><br/><br/>
-                <label>NOME DA CATEGORIA 1: </label>
-                <input type="text" name="cadastraCat1" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 2: </label>
-                <input type="text" name="cadastraCat2" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 3: </label>
-                <input type="text" name="cadastraCat3" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 4: </label>
-                <input type="text" name="cadastraCat4" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 5: </label>
-                <input type="text" name="cadastraCat5" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 6: </label>
-                <input type="text" name="cadastraCat6" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 7: </label>
-                <input type="text" name="cadastraCat7" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 8: </label>
-                <input type="text" name="cadastraCat8" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 9: </label>
-                <input type="text" name="cadastraCat9" size="15"  maxlength="30"/><br/><br/>
-                <label>NOME DA CATEGORIA 10: </label>
-                <input type="text" name="cadastraCat10" size="15"  maxlength="30"/><br/><br/>
-                <input type="submit" id="submit" value="Cadastrar"/>
-                <input type="reset" value="Limpar"/>
-                <br/>
-                <br/>
-                <br/>
-                <label> - Cadastra apenas categorias principais;</label><br/>
-                <label> - Pode cadastrar menos do que 5 categorias por vez;</label><br/>
-                <label> - Se retornar a esta tela inicial quer dizer que deu certo;</label><br/>
-                <?php
+        $categoria->setNumLoja($loja);
+        $categoria->setApi($api);
+        $categoria->setNomeCategoria($vcat1);
+        $categoria->setListaCategoria($vcat1);
+        $categoria->setNomeCategoria($vcat2);
+        $categoria->setListaCategoria($vcat2);
+        $categoria->setNomeCategoria($vcat3);
+        $categoria->setListaCategoria($vcat3);
+        $categoria->setNomeCategoria($vcat4);
+        $categoria->setListaCategoria($vcat4);
+        $categoria->setNomeCategoria($vcat5);
+        $categoria->setListaCategoria($vcat5);
+        $categoria->setNomeCategoria($vcat6);
+        $categoria->setListaCategoria($vcat6);
+        $categoria->setNomeCategoria($vcat7);
+        $categoria->setListaCategoria($vcat7);
+        $categoria->setNomeCategoria($vcat8);
+        $categoria->setListaCategoria($vcat8);
+        $categoria->setNomeCategoria($vcat9);
+        $categoria->setListaCategoria($vcat9);
+        $categoria->setNomeCategoria($vcat10);
+        $categoria->setListaCategoria($vcat10);
 
-                //die('tem');
-
-            } else {
-                die('n tem');
-                header("Location: http://implantador.x10.mx/index.php");
-                exit;
-            } 
-            } else {
-                //die('adsadasd');
-                header("Location: http://implantador.x10.mx/index.php");
-            }
+        header("Location: controller.php");
