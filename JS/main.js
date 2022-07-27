@@ -39,3 +39,20 @@ $(function () {
       overlay.css({"opacity": "0", "width": "0"});
     });
    });
+
+$(function () {
+    var show_row = $(".show-category");
+    var no_show_row = $(".no-show-row");
+
+    show_row.click(function (e) {
+        e.preventDefault();
+        $(this).children(".show-row").css({"display": "block"});
+        $(this).children(".nova_categoria").css({"display": "none"});
+        $(this).children(".zmdi.zmdi-notifications-add").css({"display": "none"});
+      });      
+    /*no_show_row.click(function (e) {
+        e.preventDefault();
+        menu.css({"display": "none"});
+      });*/
+      
+   });
